@@ -2016,5 +2016,6 @@
     "/x410/news": [],
     "/right/forum/:id?": [],
     "/hket/:category?": [],
-    "/s-hentai/:id?": []
+    "/s-hentai/:id?": [],
+    "/dykszx/news/:type?": []
 }
