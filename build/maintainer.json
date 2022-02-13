@@ -436,6 +436,12 @@
     "/gov/guangdong/tqyb/sncsyjxh": [
         "Fatpandac"
     ],
+    "/gov/huizhou/zwgk/:category?": [
+        "Fatpandac"
+    ],
+    "/gov/sichuan/deyang/govpulicinfo/:countyName/:institutionName?": [
+        "zytomorrow"
+    ],
     "/govpulicinfo/sichuan/deyang/:countyName/:institutionName?": [
         "zytomorrow"
     ],
