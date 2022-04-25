@@ -711,9 +711,6 @@
     "/gov/pbc/gzlw": [
         "Fatpandac"
     ],
-    "/govpulicinfo/sichuan/deyang/:countyName/:institutionName?": [
-        "zytomorrow"
-    ],
     "/guancha/:category?": [
         "nczitzk",
         "Jeason0228"
