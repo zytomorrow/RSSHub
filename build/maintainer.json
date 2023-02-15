@@ -1518,6 +1518,9 @@
     "/fx-markets/fx-markets/:channel": [
         "mikkkee"
     ],
+    "/fzdm/manhua/:id/:cdn?": [
+        "zytomorrow"
+    ],
     "/gameapps/": [
         "TonyRL"
     ],
@@ -6021,7 +6024,6 @@
     "/jijitang/publication": [],
     "/grubstreet": [],
     "/manhuadui/manhua/:name/:serial?": [],
-    "/fzdm/manhua/:id": [],
     "/cfd/gbp_div": [],
     "/monotype/article": [],
     "/stork/keyword/:trackID/:displayKey": [],
