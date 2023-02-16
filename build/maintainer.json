@@ -101,6 +101,12 @@
     "/423down/:category/:type": [
         "Fatpandac"
     ],
+    "/500px/tribe/set/:id": [
+        "TonyRL"
+    ],
+    "/500px/user/works/:id": [
+        "TonyRL"
+    ],
     "/50forum/": [
         "sddiky"
     ],
@@ -1447,6 +1453,9 @@
         "ZeroClad",
         "15x15G"
     ],
+    "/fffdm/manhua/:id/:cdn?": [
+        "zytomorrow"
+    ],
     "/filmdeepfocus/:category?": [
         "nczitzk"
     ],
@@ -1517,9 +1526,6 @@
     ],
     "/fx-markets/fx-markets/:channel": [
         "mikkkee"
-    ],
-    "/fzdm/manhua/:id/:cdn?": [
-        "zytomorrow"
     ],
     "/gameapps/": [
         "TonyRL"
@@ -4639,6 +4645,9 @@
     ],
     "/wechat/uread/:userid": [
         "kt286"
+    ],
+    "/wechat/wechat2rss/:id": [
+        "TonyRL"
     ],
     "/wechat/wxnmh/:id": [
         "laampui"
