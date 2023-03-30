@@ -14,7 +14,7 @@ Full transcript support for better user experience.
 
 ### Category
 
-<RouteEn author="nczitzk" example="/7mmtv/zh/censored_list/all" path="/7mmtv/:language?/:category?/:type?" :paramsDesc="['Language, see below, `en` as English by default', 'Category, see below, `censored_list` as Censored by default', 'Server, see below, all server by default']">
+<RouteEn author="nczitzk" example="/7mmtv/zh/censored_list/all" path="/7mmtv/:language?/:category?/:type?" :paramsDesc="['Language, see below, `en` as English by default', 'Category, see below, `censored_list` as Censored by default', 'Server, see below, all server by default']" anticrawler="1">
 
 **Language**
 
@@ -42,7 +42,7 @@ Full transcript support for better user experience.
 
 ### Maker
 
-<RouteEn author="nczitzk" example="/7mmtv/zh/amateurjav_makersr/1752" path="/7mmtv/:language?/:category?/:id?" :paramsDesc="['Language, see below, `en` as English by default', 'Category, see below', 'Id, see below']">
+<RouteEn author="nczitzk" example="/7mmtv/zh/amateurjav_makersr/1752" path="/7mmtv/:language?/:category?/:id?" :paramsDesc="['Language, see below, `en` as English by default', 'Category, see below', 'Id, see below']" anticrawler="1">
 
 **Language**
 
@@ -461,9 +461,9 @@ See [Directory](https://www.javlibrary.com/en/star_list.php) to view all stars.
 
 Refer to [Pornhub F.A.Qs](https://help.pornhub.com/hc/en-us/articles/360044327034-How-do-I-change-the-language-), English by default. For example:
 
-- `cn` (Chinese), for Pornhub in China <https://cn.pornhub.com/>；
+-   `cn` (Chinese), for Pornhub in China <https://cn.pornhub.com/>；
 
-- `jp` (Japanese), for Pornhub in Japan <https://jp.pornhub.com/> etc.
+-   `jp` (Japanese), for Pornhub in Japan <https://jp.pornhub.com/> etc.
 
 ## PRESTIGE(プレステージ)
 

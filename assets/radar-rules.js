@@ -108,14 +108,6 @@
             { title: '栏目', docs: 'https://docs.rsshub.app/other.html#wegene', source: '/crowdsourcing', target: '/wegene/column/all/all' },
         ],
     },
-    'qdaily.com': {
-        _name: '好奇心日报',
-        www: [
-            { title: '标签', docs: 'https://docs.rsshub.app/new-media.html#hao-qi-xin-ri-bao', source: '/tags/:idd', target: (params) => `/qdaily/tag/${params.idd.replace('.html', '')}` },
-            { title: '栏目', docs: 'https://docs.rsshub.app/new-media.html#hao-qi-xin-ri-bao', source: '/special_columns/:idd', target: (params) => `/qdaily/column/${params.idd.replace('.html', '')}` },
-            { title: '分类', docs: 'https://docs.rsshub.app/new-media.html#hao-qi-xin-ri-bao', source: '/categories/:idd', target: (params) => `/qdaily/category/${params.idd.replace('.html', '')}` },
-        ],
-    },
     '3ycy.com': { _name: '三界异次元', www: [{ title: '最近更新', docs: 'https://docs.rsshub.app/anime.html#san-jie-yi-ci-yuan', source: '/', target: '/3ycy/home' }] },
     'emi-nitta.net': {
         _name: 'Emi Nitta',
@@ -164,53 +156,6 @@
     'steampowered.com': { _name: 'Steam', store: [{ title: 'search', docs: 'https://docs.rsshub.app/game.html#steam', source: '/search/', target: (params, url) => `/steam/search/${new URL(url).searchParams}` }] },
     // 'baijingapp.com': { _name: '白鲸出海', www: [{ title: '文章', docs: 'https://docs.rsshub.app/new-media.html#bai-jing-chu-hai', source: '', target: '/baijing' }] },
     'xiaomi.cn': { _name: '小米社区', www: [{ title: '圈子', docs: 'https://docs.rsshub.app/bbs.html#xiao-mi-she-qu', source: '/board/:boardId', target: '/mi/bbs/board/:boardId' }] },
-    '163.com': {
-        _name: '网易',
-        music: [
-            {
-                title: '云音乐 - 用户歌单',
-                docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue',
-                source: '/',
-                target: (params, url) => {
-                    const id = new URL(url).hash.match(/home\?id=(.*)/)[1];
-                    return id ? `/ncm/user/playlist/${id}` : '';
-                },
-            },
-            {
-                title: '云音乐 - 歌单歌曲',
-                docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue',
-                source: '/',
-                target: (params, url) => {
-                    const id = new URL(url).hash.match(/playlist\?id=(.*)/)[1];
-                    return id ? `/ncm/playlist/${id}` : '';
-                },
-            },
-            {
-                title: '云音乐 - 歌手专辑',
-                docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue',
-                source: '/',
-                target: (params, url) => {
-                    const id = new URL(url).hash.match(/album\?id=(.*)/)[1];
-                    return id ? `/ncm/artist/${id}` : '';
-                },
-            },
-            {
-                title: '云音乐 - 电台节目',
-                docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue',
-                source: '/',
-                target: (params, url) => {
-                    const id = new URL(url).hash.match(/djradio\?id=(.*)/)[1];
-                    return id ? `/ncm/djradio/${id}` : '';
-                },
-            },
-        ],
-        'y.music': [
-            { title: '云音乐 - 用户歌单', docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue', source: '/m/user', target: (params, url) => `/ncm/playlist/${new URL(url).searchParams.get('id')}` },
-            { title: '云音乐 - 歌单歌曲', docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue', source: '/m/playlist', target: (params, url) => `/ncm/playlist/${new URL(url).searchParams.get('id')}` },
-            { title: '云音乐 - 歌手专辑', docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue', source: '/m/album', target: (params, url) => `/ncm/playlist/${new URL(url).searchParams.get('id')}` },
-            { title: '云音乐 - 播单声音', docs: 'https://docs.rsshub.app/multimedia.html#wang-yi-yun-yin-yue', source: ['/m/radio', '/m/djradio'], target: (params, url) => `/ncm/playlist/${new URL(url).searchParams.get('id')}` },
-        ],
-    },
     'suzhou.gov.cn': { _name: '苏州市政府', www: [{ title: '政府新闻', docs: 'https://docs.rsshub.app/government.html#su-zhou-shi-ren-min-zheng-fu', source: '/szsrmzf/:uid/nav_list.shtml', target: '/gov/suzhou/news/:uid' }] },
     'mqube.net': {
         _name: 'MQube',
@@ -221,7 +166,6 @@
             { title: '标签最近更新', docs: 'https://docs.rsshub.app/multimedia.html#mqube', source: '/search/tag/:tag', target: '/mqube/tag/:tag' },
         ],
     },
-    'nikkei.com': { _name: '日本経済新聞', www: [{ title: 'ホームページ', docs: 'https://docs.rsshub.app/traditional-media.html#ri-ben-jing-ji-xin-wen', source: '/', target: '/nikkei/index' }] },
     'last.fm': {
         _name: 'Last.fm',
         www: [
@@ -639,21 +583,6 @@
         ],
     },
     'eventernote.com': { _name: 'Eventernote', www: [{ title: '声优活动及演唱会', docs: 'https://docs.rsshub.app/anime.html#eventernote', source: '/actors/:name/:id/events', target: '/eventernote/actors/:name/:id' }] },
-    'instagram.com': {
-        _name: 'Instagram',
-        www: [
-            {
-                title: '用户',
-                docs: 'https://docs.rsshub.app/social-media.html#instagram',
-                source: '/:id',
-                target: (params) => {
-                    if (params.id !== 'explore' && params.id !== 'developer') {
-                        return '/instagram/user/:id';
-                    }
-                },
-            },
-        ],
-    },
     'huya.com': { _name: '虎牙直播', '.': [{ title: '直播间开播', docs: 'https://docs.rsshub.app/live.html#hu-ya-zhi-bo-zhi-bo-jian-kai-bo', source: '/:id', target: '/huya/live/:id' }] },
     'craigslist.org': { _name: 'Craigslist', '.': [{ title: '商品搜索列表', docs: 'https://docs.rsshub.app/shopping.html#craigslist' }] },
     'scboy.com': {
