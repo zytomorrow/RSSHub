@@ -114,7 +114,7 @@
         "query-string": "9.1.0",
         "rate-limiter-flexible": "5.0.3",
         "re2js": "0.4.1",
-        "rfc4648": "1.5.3",
+        "rfc4648": "1.5.4",
         "rss-parser": "3.13.0",
         "sanitize-html": "2.13.0",
         "simplecc-wasm": "1.0.0",
