@@ -1,4 +1,4 @@
-import { Route } from '@/types';
+import { Route, ViewType } from '@/types';
 import cache from '@/utils/cache';
 import { load } from 'cheerio';
 import got from '@/utils/got';
@@ -8,6 +8,7 @@ import timezone from '@/utils/timezone';
 export const route: Route = {
     path: '/apod',
     categories: ['picture'],
+    view: ViewType.Pictures,
     example: '/bjp/apod',
     parameters: {},
     features: {

@@ -38,7 +38,7 @@ async function handler() {
             await page.waitForSelector('div.container');
 
             const html = await page.evaluate(() => document.documentElement.innerHTML);
-            browser.close();
+            await browser.close();
             return html;
         },
         config.cache.routeExpire,
@@ -48,7 +48,7 @@ async function handler() {
     const $ = load(html);
 
     const list = $('#newsListUl li')
-        .get()
+        .toArray()
         .map((elem) => {
             const $elem = $(elem);
             return {

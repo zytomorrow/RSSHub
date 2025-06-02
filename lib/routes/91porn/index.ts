@@ -1,6 +1,4 @@
 import { Route } from '@/types';
-import { getCurrentPath } from '@/utils/helpers';
-const __dirname = getCurrentPath(import.meta.url);
 
 import cache from '@/utils/cache';
 import got from '@/utils/got';
@@ -34,8 +32,8 @@ export const route: Route = {
     handler,
     url: '91porn.com/index.php',
     description: `| English | 简体中文 | 繁體中文 |
-  | ------- | -------- | -------- |
-  | en\_US  | cn\_CN   | zh\_ZH   |`,
+| ------- | -------- | -------- |
+| en\_US  | cn\_CN   | zh\_ZH   |`,
 };
 
 async function handler(ctx) {

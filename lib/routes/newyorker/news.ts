@@ -1,4 +1,4 @@
-import { Route } from '@/types';
+import { Route, ViewType } from '@/types';
 import cache from '@/utils/cache';
 import ofetch from '@/utils/ofetch';
 import { load } from 'cheerio';
@@ -7,6 +7,7 @@ const host = 'https://www.newyorker.com';
 export const route: Route = {
     path: '/:category',
     categories: ['traditional-media'],
+    view: ViewType.Articles,
     example: '/newyorker/latest',
     parameters: { category: 'tab name. can be found at url' },
     features: {
@@ -22,8 +23,8 @@ export const route: Route = {
             source: ['newyorker.com/:category?'],
         },
     ],
-    name: 'The New Yorker',
-    maintainers: ['EthanWng97'],
+    name: 'Articles',
+    maintainers: ['EthanWng97', 'pseudoyu'],
     handler,
 };
 

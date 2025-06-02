@@ -1,4 +1,4 @@
-import { Route } from '@/types';
+import { Route, ViewType } from '@/types';
 import cache from '@/utils/cache';
 import parser from '@/utils/rss-parser';
 import { load } from 'cheerio';
@@ -7,6 +7,7 @@ const host = 'https://www.gq.com';
 export const route: Route = {
     path: '/news',
     categories: ['traditional-media'],
+    view: ViewType.Articles,
     example: '/gq/news',
     parameters: {},
     features: {

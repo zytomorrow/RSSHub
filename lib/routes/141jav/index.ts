@@ -1,6 +1,4 @@
 import { Route } from '@/types';
-import { getCurrentPath } from '@/utils/helpers';
-const __dirname = getCurrentPath(import.meta.url);
 
 import { getSubPath } from '@/utils/common-utils';
 import got from '@/utils/got';
@@ -66,7 +64,7 @@ async function handler(ctx) {
     const $ = load(response.data);
 
     if (getSubPath(ctx) === '/') {
-        ctx.redirect(`/141jav${$('.overview').first().attr('href')}`);
+        ctx.set('redirect', `/141jav${$('.overview').first().attr('href')}`);
         return;
     }
 

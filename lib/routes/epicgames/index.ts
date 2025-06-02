@@ -1,6 +1,4 @@
 import { Route, ViewType } from '@/types';
-import { getCurrentPath } from '@/utils/helpers';
-const __dirname = getCurrentPath(import.meta.url);
 
 import got from '@/utils/got';
 import { parseDate } from '@/utils/parse-date';
@@ -10,9 +8,9 @@ import dayjs from 'dayjs';
 
 export const route: Route = {
     path: '/freegames/:locale?/:country?',
-    categories: ['game', 'popular'],
+    categories: ['game'],
     view: ViewType.Notifications,
-    example: '/epicgames/freegames',
+    example: '/epicgames/freegames/en-US/US',
     parameters: {
         locale: {
             description: 'Locale',
@@ -80,9 +78,9 @@ async function handler(ctx) {
             let linkSlug =
                 item.catalogNs.mappings && item.catalogNs.mappings.length > 0
                     ? item.catalogNs.mappings[0].pageSlug
-                    : item.offerMappings && item.offerMappings.length > 0
+                    : (item.offerMappings && item.offerMappings.length > 0
                       ? item.offerMappings[0].pageSlug
-                      : (item.productSlug ?? item.urlSlug);
+                      : (item.productSlug ?? item.urlSlug));
             if (item.offerType === 'ADD_ON') {
                 linkSlug = item.offerMappings[0].pageSlug;
             }

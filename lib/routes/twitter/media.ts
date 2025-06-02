@@ -1,10 +1,11 @@
 import { Route, ViewType } from '@/types';
 import api from './api';
 import utils from './utils';
+import logger from '@/utils/logger';
 
 export const route: Route = {
     path: '/media/:id/:routeParams?',
-    categories: ['social-media', 'popular'],
+    categories: ['social-media'],
     view: ViewType.Pictures,
     example: '/twitter/media/_RSSHub',
     parameters: { id: 'username; in particular, if starts with `+`, it will be recognized as a [unique ID](https://github.com/DIYgod/RSSHub/issues/12221), e.g. `+44196397`', routeParams: 'extra parameters, see the table above.' },
@@ -47,7 +48,12 @@ async function handler(ctx) {
 
     await api.init();
     const userInfo = await api.getUser(id);
-    const data = await api.getUserMedia(id, params);
+    let data;
+    try {
+        data = await api.getUserMedia(id, params);
+    } catch (error) {
+        logger.error(error);
+    }
     const profileImageUrl = userInfo?.profile_image_url || userInfo?.profile_image_url_https;
 
     return {
@@ -55,8 +61,11 @@ async function handler(ctx) {
         link: `https://x.com/${userInfo?.screen_name}/media`,
         image: profileImageUrl.replace(/_normal.jpg$/, '.jpg'),
         description: userInfo?.description,
-        item: utils.ProcessFeed(ctx, {
-            data,
-        }),
+        item:
+            data &&
+            utils.ProcessFeed(ctx, {
+                data,
+            }),
+        allowEmpty: true,
     };
 }

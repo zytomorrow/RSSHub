@@ -1,6 +1,4 @@
 import { Route } from '@/types';
-import { getCurrentPath } from '@/utils/helpers';
-const __dirname = getCurrentPath(import.meta.url);
 
 import cache from '@/utils/cache';
 import { load } from 'cheerio';
@@ -9,7 +7,7 @@ import { parseDate } from '@/utils/parse-date';
 import { art } from '@/utils/render';
 import path from 'node:path';
 import { config } from '@/config';
-import asyncPool from 'tiny-async-pool';
+import pMap from 'p-map';
 
 export const route: Route = {
     path: '/comic/:id/:chapterCnt?',
@@ -25,7 +23,7 @@ export const route: Route = {
         supportScihub: false,
     },
     name: '漫画更新',
-    maintainers: ['btdwv', 'marvolo666', 'yan12125'],
+    maintainers: ['btdwv', 'marvolo666'],
     handler,
 };
 
@@ -34,9 +32,9 @@ async function handler(ctx) {
     // 用于控制返回的章节数量
     const chapterCnt = Number(ctx.req.param('chapterCnt') || 10);
     // 直接调用拷贝漫画的接口
-    const host = 'copymanga.tv';
+    const host = 'www.mangacopy.com';
     const baseUrl = `https://${host}`;
-    const apiBaseUrl = `https://api.${host}`;
+    const apiBaseUrl = `https://${host}`;
     const strBaseUrl = `${apiBaseUrl}/api/v3/comic/${id}/group/default/chapters`;
     const iReqLimit = 500;
     // 获取漫画列表
@@ -128,15 +126,7 @@ async function handler(ctx) {
         };
     };
 
-    const asyncPoolAll = async (...args) => {
-        const results = [];
-        for await (const result of asyncPool(...args)) {
-            results.push(result);
-        }
-        return results;
-    };
-
-    const result = await asyncPoolAll(3, chapterArray.slice(0, chapterCnt), (chapter) => cache.tryGet(chapter.link, () => genResult(chapter)));
+    const result = await pMap(chapterArray.slice(0, chapterCnt), (chapter) => cache.tryGet(chapter.link, () => genResult(chapter)), { concurrency: 3 });
     const items = [...result, ...chapterArray.slice(chapterCnt)];
 
     return {

@@ -7,13 +7,15 @@ const graphQLEndpointsPlain = [
     '/graphql/DiTkXJgLqBBxCs7zaYsbtA/HomeLatestTimeline',
     '/graphql/bt4TKuFz4T7Ckk-VvQVSow/UserTweetsAndReplies',
     '/graphql/dexO_2tohK86JDudXXG3Yw/UserMedia',
-    '/graphql/tD8zKvQzwY3kdx5yz6YmOw/UserByRestId',
+    '/graphql/Qw77dDjp9xCpUY-AXwt-yQ/UserByRestId',
     '/graphql/UN1i3zUiCWa-6r-Uaho4fw/SearchTimeline',
     '/graphql/Pa45JvqZuKcW1plybfgBlQ/ListLatestTweetsTimeline',
     '/graphql/QuBlQ6SxNAQCt6-kBiCXCQ/TweetDetail',
 ];
 
 const gqlMap = Object.fromEntries(graphQLEndpointsPlain.map((endpoint) => [endpoint.split('/')[3].replace(/V2$|Query$|QueryV2$/, ''), endpoint]));
+
+const thirdPartySupportedAPI = ['UserByScreenName', 'UserByRestId', 'UserTweets', 'UserTweetsAndReplies', 'ListLatestTweetsTimeline', 'SearchTimeline'];
 
 const gqlFeatureUser = {
     hidden_profile_subscriptions_enabled: true,
@@ -112,4 +114,4 @@ const timelineParams = {
 
 const bearerToken = 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA';
 
-export { baseUrl, gqlMap, gqlFeatures, timelineParams, bearerToken };
+export { baseUrl, gqlMap, gqlFeatures, timelineParams, bearerToken, thirdPartySupportedAPI };

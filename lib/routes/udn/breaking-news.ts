@@ -1,6 +1,4 @@
 import { Route } from '@/types';
-import { getCurrentPath } from '@/utils/helpers';
-const __dirname = getCurrentPath(import.meta.url);
 
 import cache from '@/utils/cache';
 import got from '@/utils/got';
@@ -32,8 +30,8 @@ export const route: Route = {
     maintainers: ['miles170'],
     handler,
     description: `| 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 11   | 12   | 13   | 99     |
-  | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ |
-  | 精選 | 要聞 | 社會 | 地方 | 兩岸 | 國際 | 財經 | 運動 | 娛樂 | 生活 | 股市 | 文教 | 數位 | 不分類 |`,
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ |
+| 精選 | 要聞 | 社會 | 地方 | 兩岸 | 國際 | 財經 | 運動 | 娛樂 | 生活 | 股市 | 文教 | 數位 | 不分類 |`,
 };
 
 async function handler(ctx) {
@@ -55,7 +53,7 @@ async function handler(ctx) {
                 let result = await got(link);
                 // VIP article requires redirection
                 // e.g. https://udn.com/news/story/7331/6576320
-                const vip = result.data.match(/<script language=javascript>window\.location\.href="(https?:\/\/[^"]+")/);
+                const vip = result.data.match(/<script language=javascript>window\.location\.href="(https?:\/\/[^"]+)"/);
                 if (vip) {
                     result = await got(vip[1]);
                 }
@@ -87,11 +85,11 @@ async function handler(ctx) {
 
                 if (data.publisher.name === '轉角國際 udn Global') {
                     // 轉角24小時
-                    description += $('.story_body_content')
+                    description = $('.story_body_content')
                         .html()
                         .split(/<!--\d+?-->/g)
                         .slice(1, -1)
-                        .join(',');
+                        .join('');
                 }
 
                 return {
@@ -120,7 +118,7 @@ const getLinkName = async (link) => {
         const result = await got(url);
         const $ = load(result.data);
         const data = $('.cate-list__subheader a')
-            .get()
+            .toArray()
             .map((item) => {
                 item = $(item);
                 return [item.attr('href'), item.text().trim()];

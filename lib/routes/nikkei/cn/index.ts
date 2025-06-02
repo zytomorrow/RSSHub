@@ -5,7 +5,18 @@ import got from '@/utils/got';
 import { load } from 'cheerio';
 import timezone from '@/utils/timezone';
 import { parseDate } from '@/utils/parse-date';
-import parser from '@/utils/rss-parser';
+import { config } from '@/config';
+import Parser from 'rss-parser';
+
+const parser = new Parser({
+    customFields: {
+        item: ['magnet'],
+    },
+    headers: {
+        'User-Agent': config.ua,
+    },
+    defaultRSS: 0.9,
+});
 
 export const route: Route = {
     path: '/cn/*',
@@ -86,6 +97,7 @@ async function handler(ctx) {
 
         $ = load(response.data);
 
+        const seenLinks = new Set<string>();
         items = $('dt a')
             .toArray()
             .map((item) => {
@@ -96,7 +108,13 @@ async function handler(ctx) {
                     link: new URL(item.attr('href'), currentUrl).href,
                 };
             })
-            .reduce((prev, cur) => (prev.length && prev.at(-1).link === cur.link ? prev : [...prev, cur]), [])
+            .filter((item) => {
+                if (seenLinks.has(item.link)) {
+                    return false;
+                }
+                seenLinks.add(item.link);
+                return true;
+            })
             .slice(0, limit);
     }
 
