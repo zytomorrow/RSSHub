@@ -12784,8 +12784,7 @@ export default {
           "channel": "channel, default to `top stories`"
         },
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "description": "Provides a better reading experience (full text articles) over the official ones.\n\n    Support major channels, refer to [BBC RSS feeds](https://www.bbc.co.uk/news/10628494). Eg, `business` for `https://feeds.bbci.co.uk/news/business/rss.xml`.\n\n    -   Channel contains sub-directories, such as `https://feeds.bbci.co.uk/news/world/asia/rss.xml`, replace `/` with `-`, `/bbc/world-asia`.",
         "location": "index.ts",
@@ -31187,8 +31186,7 @@ export default {
       "/user/:name": {
         "path": "/user/:name",
         "categories": [
-          "design",
-          "popular"
+          "design"
         ],
         "example": "/dribbble/user/google",
         "parameters": {
@@ -43719,7 +43717,8 @@ export default {
         ],
         "example": "/gov/ndrc/zfxxgk",
         "categories": [
-          "government"
+          "government",
+          "popular"
         ],
         "features": {
           "requireConfig": false,
@@ -52721,7 +52720,8 @@ export default {
       "/chart/:chart?": {
         "path": "/chart/:chart?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
         "view": 5,
         "parameters": {
