@@ -3036,7 +3036,8 @@ export default {
       "/hot-list/:category?": {
         "path": "/hot-list/:category?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/36kr/hot-list",
         "parameters": {
@@ -17902,8 +17903,7 @@ export default {
       "/weekly": {
         "path": "/weekly",
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "example": "/caixin/weekly",
         "radar": [
@@ -40107,7 +40107,8 @@ export default {
       "/:kind?": {
         "path": "/:kind?",
         "categories": [
-          "program-update"
+          "program-update",
+          "popular"
         ],
         "example": "/gofans",
         "parameters": {
@@ -75941,8 +75942,7 @@ export default {
       "/news": {
         "path": "/news",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/panewslab/news",
         "radar": [
@@ -83203,7 +83203,8 @@ export default {
       "/daily": {
         "path": "/daily",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/readhub/daily",
         "parameters": {},
@@ -109091,8 +109092,7 @@ export default {
       "/latest": {
         "path": "/latest",
         "categories": [
-          "shopping",
-          "popular"
+          "shopping"
         ],
         "example": "/xiaomiyoupin/latest",
         "parameters": {},
