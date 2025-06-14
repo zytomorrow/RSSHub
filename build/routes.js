@@ -5402,7 +5402,8 @@ export default {
       "/article/:categoryId/:sortType?/:timeRange?": {
         "path": "/article/:categoryId/:sortType?/:timeRange?",
         "categories": [
-          "anime"
+          "anime",
+          "popular"
         ],
         "view": 0,
         "example": "/acfun/article/110",
@@ -46339,7 +46340,8 @@ export default {
       "/:section?/:type?/:user?": {
         "path": "/:section?/:type?/:user?",
         "categories": [
-          "programming"
+          "programming",
+          "popular"
         ],
         "view": 0,
         "example": "/hackernews/threads/comments_list/dang",
@@ -58494,8 +58496,7 @@ export default {
       "/:source?/:id?/:type?": {
         "path": "/:source?/:id?/:type?",
         "categories": [
-          "anime",
-          "popular"
+          "anime"
         ],
         "example": "/kemono",
         "parameters": {
@@ -110835,8 +110836,7 @@ export default {
       "/post/popular_recent/:period?": {
         "path": "/post/popular_recent/:period?",
         "categories": [
-          "picture",
-          "popular"
+          "picture"
         ],
         "view": 2,
         "example": "/yande/post/popular_recent/1d",
