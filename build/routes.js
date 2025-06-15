@@ -1063,7 +1063,8 @@ export default {
       "/:type/:keyword{.*}?": {
         "path": "/:type/:keyword{.*}?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
         "name": "通用",
         "maintainers": [
@@ -35333,8 +35334,7 @@ export default {
       "/news/:lang?": {
         "path": "/news/:lang?",
         "categories": [
-          "finance",
-          "popular"
+          "finance"
         ],
         "view": 0,
         "example": "/followin/news",
