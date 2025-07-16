@@ -381,8 +381,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       '@types/title':
-        specifier: 3.4.3
-        version: 3.4.3
+        specifier: 4.0.0
+        version: 4.0.0
       '@types/uuid':
         specifier: 10.0.0
         version: 10.0.0
@@ -1039,8 +1039,8 @@ packages:
     resolution: {integrity: sha512-ETyHEk2VHHvl9b9jZP5IHPavHYk57EhanlRRuae9XCpb/j5bDCbPPMOBfCWhnl/7EDJz0jEMCi/RhccCE8r1+Q==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.28.0':
-    resolution: {integrity: sha512-jYnje+JyZG5YThjHiF28oT4SIZLnYOcSBb6+SDaFIyzDVSkXQmQQYclJ2R+YxcdmK0AX6x1E5OQNtuh3jHDrUg==}
+  '@babel/types@7.28.1':
+    resolution: {integrity: sha512-x0LvFTekgSX+83TI28Y9wYPUfzrnl2aT5+5QLnO6v7mSJYtEEevuDRN0F0uSHRk1G1IWZC43o00Y0xDDrpBGPQ==}
     engines: {node: '>=6.9.0'}
 
   '@bbob/core@4.2.0':
@@ -2406,8 +2406,9 @@ packages:
   '@types/tedious@4.0.14':
     resolution: {integrity: sha512-KHPsfX/FoVbUGbyYvk1q9MMQHLPeRZhRJZdO45Q4YjvFkv4hMNghCWTvy7rdKessBsmtz4euWCWAB6/tVpI1Iw==}
 
-  '@types/title@3.4.3':
-    resolution: {integrity: sha512-mjupLOb4kwUuoUFokkacy/VMRVBH2qtqZ5AX7K7iha6+iKIkX80n/Y4EoNVEVRmer8dYJU/ry+fppUaDFVQh7Q==}
+  '@types/title@4.0.0':
+    resolution: {integrity: sha512-+/DoT3en4uDoeAq55IHtwLVWq51kCJVIjQFswW7kfw36p/mTa7gyf7vqAuoGdYmDcY7Mg7tgv6rfrnU7jNQ7BA==}
+    deprecated: This is a stub types definition. title provides its own type definitions, so you do not need this installed.
 
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
@@ -6368,7 +6369,7 @@ snapshots:
       '@babel/parser': 7.28.0
       '@babel/template': 7.27.2
       '@babel/traverse': 7.28.0
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.1
       convert-source-map: 2.0.0
       debug: 4.4.1
       gensync: 1.0.0-beta.2
@@ -6388,7 +6389,7 @@ snapshots:
   '@babel/generator@7.28.0':
     dependencies:
       '@babel/parser': 7.28.0
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.1
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
       jsesc: 3.1.0
@@ -6509,7 +6510,7 @@ snapshots:
   '@babel/helpers@7.27.6':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.1
 
   '@babel/highlight@7.25.9':
     dependencies:
@@ -6528,7 +6529,7 @@ snapshots:
 
   '@babel/parser@7.28.0':
     dependencies:
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.1
 
   '@babel/plugin-bugfix-firefox-class-in-computed-class-key@7.27.1(@babel/core@7.27.3)':
     dependencies:
@@ -7047,7 +7048,7 @@ snapshots:
       '@babel/helper-globals': 7.28.0
       '@babel/parser': 7.28.0
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.1
       debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
@@ -7062,7 +7063,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@babel/types@7.28.0':
+  '@babel/types@7.28.1':
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
@@ -8408,7 +8409,9 @@ snapshots:
     dependencies:
       '@types/node': 22.15.29
 
-  '@types/title@3.4.3': {}
+  '@types/title@4.0.0':
+    dependencies:
+      title: 4.0.1
 
   '@types/tough-cookie@4.0.5': {}
 
