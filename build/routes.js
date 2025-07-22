@@ -57653,7 +57653,8 @@ export default {
       "/category/:category": {
         "path": "/category/:category",
         "categories": [
-          "programming"
+          "programming",
+          "popular"
         ],
         "example": "/juejin/category/frontend",
         "parameters": {
@@ -110836,8 +110837,7 @@ export default {
       "/post/popular_recent/:period?": {
         "path": "/post/popular_recent/:period?",
         "categories": [
-          "picture",
-          "popular"
+          "picture"
         ],
         "view": 2,
         "example": "/yande/post/popular_recent/1d",
