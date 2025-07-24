@@ -28337,7 +28337,8 @@ export default {
       "/blog": {
         "path": "/blog",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/deepmind/blog",
         "parameters": {},
@@ -57653,8 +57654,7 @@ export default {
       "/category/:category": {
         "path": "/category/:category",
         "categories": [
-          "programming",
-          "popular"
+          "programming"
         ],
         "example": "/juejin/category/frontend",
         "parameters": {
