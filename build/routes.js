@@ -5401,8 +5401,7 @@ export default {
       "/article/:categoryId/:sortType?/:timeRange?": {
         "path": "/article/:categoryId/:sortType?/:timeRange?",
         "categories": [
-          "anime",
-          "popular"
+          "anime"
         ],
         "view": 0,
         "example": "/acfun/article/110",
