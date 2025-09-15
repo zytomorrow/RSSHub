@@ -8311,7 +8311,8 @@ export default {
       "/information/:type?": {
         "path": "/information/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/aliresearch/information",
         "parameters": {
@@ -43793,8 +43794,7 @@ export default {
       "/npc/:caty": {
         "path": "/npc/:caty",
         "categories": [
-          "government",
-          "popular"
+          "government"
         ],
         "example": "/gov/npc/c183",
         "parameters": {
