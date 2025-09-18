@@ -432,8 +432,8 @@ importers:
         specifier: 16.2.0
         version: 16.2.0
       got:
-        specifier: 14.4.8
-        version: 14.4.8
+        specifier: 14.4.9
+        version: 14.4.9
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -2253,8 +2253,8 @@ packages:
     resolution: {integrity: sha512-TV7t8GKYaJWsn00tFDqBw8+Uqmr8A0fRU1tvTQhyZzGv0sJCGRQL3JGMI3ucuKo3XIZdUP+Lx7/gh2t3lewy7g==}
     engines: {node: '>=14.16'}
 
-  '@sindresorhus/is@7.0.2':
-    resolution: {integrity: sha512-d9xRovfKNz1SKieM0qJdO+PQonjnnIfSNWfHYnBSJ9hkjm0ZPw6HlxscDXYstp3z+7V2GOFHc+J0CYrYTjqCJw==}
+  '@sindresorhus/is@7.1.0':
+    resolution: {integrity: sha512-7F/yz2IphV39hiS2zB4QYVkivrptHHh0K8qJJd9HhuWSdvf8AN7NpebW3CcDZDBQsUPMoDKWsY2WWgW7bqOcfA==}
     engines: {node: '>=18'}
 
   '@stylistic/eslint-plugin@4.4.0':
@@ -3902,8 +3902,8 @@ packages:
     resolution: {integrity: sha512-mThBblvlAF1d4O5oqyvN+ZxLAYwIJK7bpMxgYqPD9okW0C3qm5FFn7k811QrcuEBwaogR3ngOFoCfs6mRv7teQ==}
     engines: {node: '>=14.16'}
 
-  got@14.4.8:
-    resolution: {integrity: sha512-vxwU4HuR0BIl+zcT1LYrgBjM+IJjNElOjCzs0aPgHorQyr/V6H6Y73Sn3r3FOlUffvWD+Q5jtRuGWaXkU8Jbhg==}
+  got@14.4.9:
+    resolution: {integrity: sha512-Dbu075Jwm3QwNCIoCenqkqY8l2gd7e/TanuhMbzZIEsb1mpAneImSusKhZ+XdqqC3S91SDV/1SdWpGXKAlm8tA==}
     engines: {node: '>=20'}
 
   graceful-fs@4.2.11:
@@ -4864,8 +4864,8 @@ packages:
     engines: {node: ^18.17.0 || >=20.5.0}
     hasBin: true
 
-  normalize-url@8.0.2:
-    resolution: {integrity: sha512-Ee/R3SyN4BuynXcnTaekmaVdbDAEiNrHqjQIA37mHU8G9pf7aaAD4ZX3XjBLo6rsdcxA/gtkcNYZLt30ACgynw==}
+  normalize-url@8.1.0:
+    resolution: {integrity: sha512-X06Mfd/5aKsRHc0O0J5CUedwnPmnDtLF2+nq+KN9KSDlJHkPuh0JUviWjEWMe0SW/9TDdSLVPuk7L5gGTIA1/w==}
     engines: {node: '>=14.16'}
 
   notion-to-md@3.1.9:
@@ -8279,7 +8279,7 @@ snapshots:
 
   '@sindresorhus/is@5.6.0': {}
 
-  '@sindresorhus/is@7.0.2': {}
+  '@sindresorhus/is@7.1.0': {}
 
   '@stylistic/eslint-plugin@4.4.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -8944,7 +8944,7 @@ snapshots:
       http-cache-semantics: 4.2.0
       keyv: 4.5.4
       mimic-response: 4.0.0
-      normalize-url: 8.0.2
+      normalize-url: 8.1.0
       responselike: 3.0.0
 
   cacheable-request@12.0.1:
@@ -8954,7 +8954,7 @@ snapshots:
       http-cache-semantics: 4.2.0
       keyv: 4.5.4
       mimic-response: 4.0.0
-      normalize-url: 8.0.2
+      normalize-url: 8.1.0
       responselike: 3.0.0
 
   callsites@3.1.0: {}
@@ -10174,9 +10174,9 @@ snapshots:
       p-cancelable: 3.0.0
       responselike: 3.0.0
 
-  got@14.4.8:
+  got@14.4.9:
     dependencies:
-      '@sindresorhus/is': 7.0.2
+      '@sindresorhus/is': 7.1.0
       '@szmarczak/http-timer': 5.0.1
       cacheable-lookup: 7.0.0
       cacheable-request: 12.0.1
@@ -11223,7 +11223,7 @@ snapshots:
     dependencies:
       abbrev: 3.0.1
 
-  normalize-url@8.0.2: {}
+  normalize-url@8.1.0: {}
 
   notion-to-md@3.1.9:
     dependencies:
