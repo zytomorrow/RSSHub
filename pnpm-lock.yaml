@@ -152,8 +152,8 @@ importers:
         specifier: 7.0.6
         version: 7.0.6
       iconv-lite:
-        specifier: 0.6.3
-        version: 0.6.3
+        specifier: 0.7.0
+        version: 0.7.0
       imapflow:
         specifier: 1.0.196
         version: 1.0.196
