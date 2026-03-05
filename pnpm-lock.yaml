@@ -47,8 +47,8 @@ importers:
         specifier: 4.2.0
         version: 4.2.0(patch_hash=45t5oyykiv4ibbpruba4shbkca)
       '@hono/node-server':
-        specifier: 1.14.3
-        version: 1.14.3(hono@4.7.11)
+        specifier: 1.19.11
+        version: 1.19.11(hono@4.7.11)
       '@hono/zod-openapi':
         specifier: 0.19.9
         version: 0.19.9(hono@4.7.11)(zod@3.25.76)
@@ -1502,8 +1502,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@hono/node-server@1.14.3':
-    resolution: {integrity: sha512-KuDMwwghtFYSmIpr4WrKs1VpelTrptvJ+6x6mbUcZnFcc213cumTF5BdqfHyW93B19TNI4Vaev14vOI2a0Ie3w==}
+  '@hono/node-server@1.19.11':
+    resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -2794,6 +2794,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
@@ -7495,7 +7496,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/node-server@1.14.3(hono@4.7.11)':
+  '@hono/node-server@1.19.11(hono@4.7.11)':
     dependencies:
       hono: 4.7.11
 
