@@ -236,8 +236,8 @@ importers:
         specifier: 9.2.2
         version: 9.2.2
       rate-limiter-flexible:
-        specifier: 7.1.1
-        version: 7.1.1
+        specifier: 10.0.1
+        version: 10.0.1
       re2js:
         specifier: 1.1.0
         version: 1.1.0
@@ -2794,6 +2794,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
@@ -5312,8 +5313,8 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
 
-  rate-limiter-flexible@7.1.1:
-    resolution: {integrity: sha512-lsYRcqRSJrKBNt6pMzBJTiCJP5KnwsGWdObMZxd19JFUJRntM+yuHs4/2bs6NZweSLgpsDcykvzyQaumoslWQg==}
+  rate-limiter-flexible@10.0.1:
+    resolution: {integrity: sha512-3G6GMFz5Oz5nVnDv9gQ1LLMdExR4B1lOjogPIjehtgyxPMIkY09BGyk2eCYt36/OkV/0t12GEt6J6HpTl6RzZg==}
 
   re2js@1.1.0:
     resolution: {integrity: sha512-ovDCIb2ZQR7Do3NzH2XEuXOzqd1q8srvkeaOVMf+EZNt1Z4JoUVvNKCR9qf8EbqoPhvLknkoyiiBzoQtmuzIbQ==}
@@ -11752,7 +11753,7 @@ snapshots:
 
   quick-lru@5.1.1: {}
 
-  rate-limiter-flexible@7.1.1: {}
+  rate-limiter-flexible@10.0.1: {}
 
   re2js@1.1.0: {}
 
