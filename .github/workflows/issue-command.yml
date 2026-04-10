@@ -81,7 +81,7 @@ jobs:
 
       - name: Fetch affected routes
         id: fetch-route
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           EVENT: ${{ toJson(github.event) }}
         with:
@@ -108,7 +108,7 @@ jobs:
 
       - name: Generate feedback
         if: env.TEST_CONTINUE
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           TEST_BASEURL: http://localhost:1200
           TEST_ROUTES: ${{ steps.fetch-route.outputs.result }}
