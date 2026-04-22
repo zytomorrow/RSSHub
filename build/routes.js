@@ -14113,8 +14113,7 @@ export default {
           "hyoban"
         ],
         "categories": [
-          "social-media",
-          "popular"
+          "social-media"
         ],
         "view": 3,
         "example": "/bilibili/ranking/0",
@@ -79883,8 +79882,7 @@ export default {
       "/pornstar/:username/:language?/:sort?": {
         "path": "/pornstar/:username/:language?/:sort?",
         "categories": [
-          "multimedia",
-          "popular"
+          "multimedia"
         ],
         "view": 3,
         "example": "/pornhub/pornstar/june-liu/www/mr",
