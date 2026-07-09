@@ -9270,8 +9270,7 @@ export default {
       "/news": {
         "path": "/news",
         "categories": [
-          "programming",
-          "popular"
+          "programming"
         ],
         "example": "/anthropic/news",
         "parameters": {},
@@ -14113,7 +14112,8 @@ export default {
           "hyoban"
         ],
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
         "view": 3,
         "example": "/bilibili/ranking/0",
@@ -79843,7 +79843,8 @@ export default {
       "/model/:username/:language?/:sort?": {
         "path": "/model/:username/:language?/:sort?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
         "view": 3,
         "example": "/pornhub/model/stacy-starando",
